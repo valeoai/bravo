@@ -79,7 +79,16 @@ h3 {
 .subtitle {
     text-align: center;
     margin-top: 18px;
+    margin-bottom: 0px;
     font-weight: 400;
+}
+
+.announcement {
+    text-align: center;
+    margin-top: 18px;
+    margin-bottom: 0px;
+    font-weight: 500;
+    text-shadow: 1px 1px 2px #DDDDBB;
 }
 
 .bravo-logo {
@@ -103,10 +112,11 @@ h3 {
 
 .nav-item {
     text-align: center;
+    text-shadow: 1px 1px 1px #DDDDDD;
 }
 
 .navbar {
-    margin-top: 24px;
+    margin-top: 12px;
 }
 
 
