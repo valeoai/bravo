@@ -84,6 +84,7 @@ h3 {
 }
 
 .announcement {
+    font-size: 24px;
     text-align: center;
     margin-top: 18px;
     margin-bottom: 0px;
@@ -200,4 +201,16 @@ acronym {
 .section-colophon {
     font-size: 12px;
     padding-bottom: 18px;
+}
+
+.image-container {
+    display: flex;
+    justify-content: space-between;
+    overflow-x: auto;
+    white-space: nowrap;
+}
+
+.image-container img {
+    max-width: calc(95% / 5);
+    height: auto;
 }

@@ -32,19 +32,6 @@
     <meta name="twitter:description"
         content="The BRAVO Workshop @ICCV 2023 presents a unique opportunity for researchers, industry experts, and policymakers to come together and address the critical challenge of trustworthy validation for autonomous vehicle systems on open roads.">
     <meta name="twitter:image" content="https://valeoai.github.io/bravo/images/hero/preview.jpg">
-    <style>
-        .image-container {
-            display: flex;
-            justify-content: space-between;
-            overflow-x: auto;
-            white-space: nowrap;
-          }
-        
-        .image-container img {
-        max-width: calc(100% / 5);
-        height: auto;
-        }
-    </style>
 </head>
 
 <body>
@@ -77,13 +64,13 @@
                                 <a class="nav-link" href="#program">Program</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link active" style="color:#FF0000" href="#challenge">CHALLENGE 🔥🔥🔥</a>
+                                <a class="nav-link" href="#challenge">Challenge</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="#cfp">Submissions</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" style="color:#FF0000" href="#dates">Dates (updated)</a>
+                                <a class="nav-link" href="#dates">Dates</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="#organizers">Organizers</a>
@@ -92,12 +79,9 @@
                     </div>
                 </div>
             </nav>
-            <h1><a style="color:#FF0000" href="#challenge">BRAVO challenge </a> is online! 🔥🔥🔥</h1>
-            <!--
-                <p class="announcement">
-                    Submissions are now open! <b>Deadline extended: Thu Jul/20, 23:59 GMT!</b>
-                </p>
-            -->
+            <p class="announcement">
+                The <a style="color:#FF0000" href="#challenge">BRAVO challenge </a> is online! 🔥🔥🔥
+            </p>
         </div>
     </div>
 
@@ -293,7 +277,9 @@
                     target="_blank">Tips to Write Good Reviews</a>.
             </p>
             <h3><a style="color:#FF0000">Camera-ready instructions</a></h3>
-            <p>The submission guidelines are detailed <a href="https://docs.google.com/document/d/1Bo6JagywppxKc1TbGaCpnip3PXxmDaW3KU8coUlM98E/edit?usp=sharing">here</a></p>
+            <p>The submission guidelines are detailed <a
+                    href="https://docs.google.com/document/d/1Bo6JagywppxKc1TbGaCpnip3PXxmDaW3KU8coUlM98E/edit?usp=sharing">here</a>
+            </p>
         </div>
 
         <div id="dates" class="container-md section-container">
@@ -336,122 +322,178 @@
         </div>
 
         <div id="challenge" class="container-md section-container">
-            <h2>BRAVO Challenge 🔥🔥🔥</h2>
-            <p>In conjunction with the BRAVO workshop at ICCV'23, we are organizing a challenge on the topic of robustness of autonomous driving in the open-world. The 2023 BRAVO challenge aims at benchmarking segmentation models on urban scenes undergoing diverse forms of natural degradation and realistic looking synthetic corruptions. We offer two tracks for benchmarking segmentation models trained on a single dataset and on multiple heterogenous datasets.</p>
+            <h2>BRAVO Challenge</h2>
+            <p>In conjunction with the BRAVO workshop at ICCV'23, we are organizing a challenge on the robustness of
+                autonomous driving in the open world. The 2023 BRAVO Challenge aims at benchmarking segmentation models
+                on urban scenes undergoing diverse forms of natural degradation and realistic-looking synthetic
+                corruptions. We offer two tracks for benchmarking segmentation models trained on a single dataset and
+                on multiple heterogeneous datasets.</p>
 
             <h3>General rules</h3>
             <ol>
-                <li>Models participating in each track must be trained using the datasets in the corresponding allowed list.</li>
-                <li>Generative models are strictly prohibited from being used for synthetic augmentation.</li>
-                <li>All results must be reproducible. All participants in the competition are required to provide a white paper containing comprehensive technical details alongside their submitted results. Trained models and inference code should be made accessible.</li>
+                <li>Models participating in each track must be trained using the datasets in the corresponding allowed
+                    list.</li>
+                <li>It is strictly forbidden to employ generative model for synthetic data augmentation.</li>
+                <li>All results must be reproducible. Participants must submit a white paper containing comprehensive
+                    technical details alongside their results. Participants must make models and inference code
+                    accessible.</li>
             </ol>
 
-            <h3>Track 1 - Single-domain training</h3>
-            <p>In this track, models must be trained exclusively on the published <a href="https://www.cityscapes-dataset.com/">Cityscapes dataset</a>. This track evaluates the robustness of models trained with limited supervision and geographical diversity when facing unexpected corruptions observed in real-world scenarios.&nbsp;</p>
+            <h3>Track 1 — Single-domain training</h3>
+            <p>In this track, models must be trained exclusively on the published
+                <a href="https://www.cityscapes-dataset.com/">Cityscapes dataset</a>. This track evaluates the
+                robustness of models trained with limited supervision and geographical diversity when facing unexpected
+                corruptions observed in real-world scenarios.
+            </p>
 
-            <p>The evaluation is performed on the 19 semantic classes of <a href="https://www.cityscapes-dataset.com/">Cityscapes</a>.</p>
+            <p>The evaluation will be performed on the 19 semantic classes of Cityscapes.
+            </p>
 
-            <h3>Track 2 - Multi-domain training</h3>
-            <p>In this track, the models can be trained over a mix of multiple datasets, which are strictly limited to the list provided below. This track permits the utilization of a wider range of datasets derived from both real and synthetic domains. It aims to assess the extent to which robustness can be enhanced with fewer constraints on the collection of training data.</p>
+            <h3>Track 2 — Multi-domain training</h3>
+            <p>In this track, the models may be trained over a mix of multiple datasets, whose choice is strictly
+                limited to the list provided below, comprising both real and synthetic domains. This track aims to
+                assess
+                the extent to which robustness can be enhanced with fewer constraints on the training data.</p>
 
-            <p>The evaluation is performed on the 19 semantic classes of <a href="https://www.cityscapes-dataset.com/">Cityscapes</a>. Participants can either maintain label sets of other datasets or remap them to Cityscapes&rsquo;.&nbsp;</p>
+            <p>The evaluation will be performed on the 19 semantic classes of
+                <a href="https://www.cityscapes-dataset.com/">Cityscapes</a>. Participants may choose maintain the label
+                sets of each dataset or remap them to Cityscapes.
+            </p>
 
-            <p>List of accepted datasets:</p>
+            <p>Allowed training datasets for Track 2:</p>
             <ul>
                 <li><a href="https://www.cityscapes-dataset.com/ ">Cityscapes</a></li>
                 <li><a href="https://bdd-data.berkeley.edu/">BDD100k</a></li>
                 <li><a href="https://www.mapillary.com/datasets">Mapillary Vistas</a></li>
                 <li><a href="https://idd.insaan.iiit.ac.in/">India Driving Dataset</a></li>
                 <li><a href="https://www.wilddash.cc/">WildDash 2</a></li>
-                <li><a href="https://download.visinf.tu-darmstadt.de/data/from_games/">(synthetic) GTA5 Dataset</a></li>
-                <li><a href="https://www.vis.xyz/shift/">(synthetic) SHIFT Dataset</a></li>
+                <li><a href="https://download.visinf.tu-darmstadt.de/data/from_games/">GTA5 Dataset</a> (synthetic)</li>
+                <li><a href="https://www.vis.xyz/shift/">SHIFT Dataset</a> (synthetic)</li>
             </ul>
 
-            <h3>BRAVO dataset</h3>
-            <p>The benchmark dataset consists of either real captured images or realistic looking augmented images. We repurpose existing datasets and combine them with our newly generated data to create the dataset. In summary, our dataset comprises images from <a href="https://acdc.vision.ee.ethz.ch/">ACDC</a>, <a href="https://segmentmeifyoucan.com/">SegmentMeIfYouCan</a>, <a href="https://arxiv.org/abs/2108.00968">Out-of-context Cityscapes</a>, and our new synthetic data.</p> 
-            <p>The full BRAVO dataset can be downloaded using <a href="https://drive.google.com/drive/u/4/folders/11-dnlbMjm8O_ynq1REuDYKOmHLqEhGYP"> the link ⏬</a>. It includes the following splits:</p>
-            <ul>
-                <li>
-                    <p> <em>bravo-synobjs:</em> augmented scenes with inpainted synthetic OOD objects. We augmented the validation images of Cityscapes and generated 656 images with 26 OOD objects.&nbsp;<a href="https://drive.google.com/drive/u/4/folders/1KKt_25S69DBf8ZTxhOhELpLgS2gyyGnf">Download link ⏬</a>&nbsp;</p></p>
-                    <p class="image-container">
-                        <img src="images/bravobenchmark/synobjs/cheetah.png" alt="Image 1">
-                        <img src="images/bravobenchmark/synobjs/chimpanzee.png" alt="Image 2">
-                        <img src="images/bravobenchmark/synobjs/lion.png" alt="Image 3">
-                        <img src="images/bravobenchmark/synobjs/panda.png" alt="Image 4">
-                        <img src="images/bravobenchmark/synobjs/penguine.png" alt="Image 5">
-                    </p>
-                </li>
-                <li>
-                    <p> <em>bravo-synrain:</em> augmented scenes with synthesized raindrops on the camera lens. We augmented the validation images of Cityscapes and generated 500 images with raindrops.&nbsp;<a href="https://drive.google.com/drive/u/4/folders/1onP6tUVSjV-qKWWLm6wiOZCB9U14_gQ6">Download link ⏬</a>&nbsp;</p>
-                    <p class="image-container">
-                        <img src="images/bravobenchmark/synrain/rain1.png" alt="Image 1">
-                        <img src="images/bravobenchmark/synrain/rain2.png" alt="Image 2">
-                        <img src="images/bravobenchmark/synrain/rain3.png" alt="Image 3">
-                        <img src="images/bravobenchmark/synrain/rain4.png" alt="Image 4">
-                        <img src="images/bravobenchmark/synrain/rain5.png" alt="Image 5">
-                    </p>
-                </li>
-
-                <li>
-                    <p> <em>bravo-synflare:</em> augmented scenes with synthesized light flares. We augmented the validation images of Cityscapes and generated 308 images with random light flares.&nbsp;<a href="https://drive.google.com/drive/u/4/folders/13EpBXUY8BChoqfMxR5JhiyhqrzqLAO2y">Download link ⏬</a>&nbsp;</p>
-                    <p class="image-container">
-                        <img src="images/bravobenchmark/synflare/flare1.png" alt="Image 1">
-                        <img src="images/bravobenchmark/synflare/flare2.png" alt="Image 2">
-                        <img src="images/bravobenchmark/synflare/flare3.png" alt="Image 3">
-                        <img src="images/bravobenchmark/synflare/flare4.png" alt="Image 4">
-                        <img src="images/bravobenchmark/synflare/flare5.png" alt="Image 5">
-                    </p>
-                </li>
-
-                <li>
-                    <p> <em>bravo-outofcontext:</em> augmented scenes with random backgrounds. We augmented the validation images of Cityscapes and generated 329 images with random random backgrounds.&nbsp;<a href="https://drive.google.com/drive/u/4/folders/1NoXqTQWxrj_yKMNRKLOd1rnn2TjqIaU5">Download link ⏬</a>&nbsp;</p>
-                    <p class="image-container">
-                        <img src="images/bravobenchmark/synooc/ooc1.png" alt="Image 1">
-                        <img src="images/bravobenchmark/synooc/ooc2.png" alt="Image 2">
-                        <img src="images/bravobenchmark/synooc/ooc3.png" alt="Image 3">
-                        <img src="images/bravobenchmark/synooc/ooc4.png" alt="Image 4">
-                        <img src="images/bravobenchmark/synooc/ooc5.png" alt="Image 5">
-                    </p>
-                </li>
-
-                <li>
-                    <p> <em>bravo-ACDC:</em> real scenes captured in adverse weather conditions, i.e. fog, night, rain and snow.&nbsp;<a href="https://drive.google.com/drive/u/4/folders/1IW6-Tdfk2At6CrIIrA-QJF6CEcHgqqha">Download link ⏬</a>&nbsp; or directly from the <a href="https://acdc.vision.ee.ethz.ch/download">ACDC website</a></p>
-                    <p class="image-container">
-                        <img src="images/bravobenchmark/acdc/acdc1.png" alt="Image 1">
-                        <img src="images/bravobenchmark/acdc/acdc2.png" alt="Image 2">
-                        <img src="images/bravobenchmark/acdc/acdc3.png" alt="Image 3">
-                        <img src="images/bravobenchmark/acdc/acdc4.png" alt="Image 4">
-                        <img src="images/bravobenchmark/acdc/acdc5.png" alt="Image 5">
-                    </p>
-                </li>
-
-                <li>
-                    <p> <em>bravo-SMIYC:</em> real scenes featuring out-of-distribution (OOD) objects rarely encountered on the road.&nbsp;<a href="https://drive.google.com/drive/u/4/folders/1XnC9_7RzwZCWaDpP3iETbGt7Yvmg0MOg">Download link ⏬</a>&nbsp;or directly from the&nbsp;<a href="https://segmentmeifyoucan.com/">SMIYC website</a></p>
-                    <p class="image-container">
-                        <img src="images/bravobenchmark/smiyc/smiyc1.jpg" alt="Image 1">
-                        <img src="images/bravobenchmark/smiyc/smiyc2.jpg" alt="Image 2">
-                        <img src="images/bravobenchmark/smiyc/smiyc3.jpg" alt="Image 3">
-                        <img src="images/bravobenchmark/smiyc/smiyc4.jpg" alt="Image 4">
-                        <img src="images/bravobenchmark/smiyc/smiyc5.jpg" alt="Image 5">
-                    </p>
-                </li>
-            </ul>
-            <p><em>We extend our heartfelt gratitude to the authors of <a href="https://acdc.vision.ee.ethz.ch/contact/">ACDC</a>, <a href="https://segmentmeifyoucan.com/">SegmentMeIfYouCan</a> and <a href="https://arxiv.org/abs/2108.00968">Out-of-context Cityscapes</a> for generously granting us permission to repurpose their benchmarking data. We are also thankful to the authors of <a href="https://github.com/astra-vision/GuidedDisent">GuidedDisent</a> and <a href="https://github.com/google-research/google-research/tree/master/flare_removal">Flare-removal</a> for providing their amazing toolboxes that help synthesize realistic looking rain drops and light flares. All of these people collectively contribute to the creation of BRAVO, a unified benchmark for robustness in autonomous driving.</em></p>
+            <h3>BRAVO Dataset</h3>
+            <p>We created the benchmark dataset with real captured images and realistic-looking augmented images,
+                repurposing existing datasets and combine them with newly generated data. The benchmark dataset
+                comprises images from <a href="https://acdc.vision.ee.ethz.ch/">ACDC</a>,
+                <a href="https://segmentmeifyoucan.com/">SegmentMeIfYouCan</a>,
+                <a href="https://arxiv.org/abs/2108.00968">Out-of-context Cityscapes</a>, and new synthetic data.
+            </p>
+            <p>Get the full benchmark dataset at the following link:
+                <a href="https://drive.google.com/drive/u/4/folders/11-dnlbMjm8O_ynq1REuDYKOmHLqEhGYP">full BRAVO
+                    Dataset download link</a>.
+            </p>
+            <p>The dataset includes the following splits (with individual download links):</p>
+            <p><b>bravo-synobjs:</b> augmented scenes with inpainted synthetic OOD objects. We augmented the
+                validation images of Cityscapes and generated 656 images with 26 OOD objects. (<a
+                    href="https://drive.google.com/drive/u/4/folders/1KKt_25S69DBf8ZTxhOhELpLgS2gyyGnf">download
+                    link</a>)</p>
+            </p>
+            <p class="image-container">
+                <img src="images/bravobenchmark/synobjs/cheetah.png" alt="Image 1">
+                <img src="images/bravobenchmark/synobjs/chimpanzee.png" alt="Image 2">
+                <img src="images/bravobenchmark/synobjs/lion.png" alt="Image 3">
+                <img src="images/bravobenchmark/synobjs/panda.png" alt="Image 4">
+                <img src="images/bravobenchmark/synobjs/penguine.png" alt="Image 5">
+            </p>
+            <p><b>bravo-synrain:</b> augmented scenes with synthesized raindrops on the camera lens. We
+                augmented the validation images of Cityscapes and generated 500 images with raindrops. (<a
+                    href="https://drive.google.com/drive/u/4/folders/1onP6tUVSjV-qKWWLm6wiOZCB9U14_gQ6">download
+                    link</a>)</p>
+            <p class="image-container">
+                <img src="images/bravobenchmark/synrain/rain1.png" alt="Image 1">
+                <img src="images/bravobenchmark/synrain/rain2.png" alt="Image 2">
+                <img src="images/bravobenchmark/synrain/rain3.png" alt="Image 3">
+                <img src="images/bravobenchmark/synrain/rain4.png" alt="Image 4">
+                <img src="images/bravobenchmark/synrain/rain5.png" alt="Image 5">
+            </p>
+            <p><b>bravo-synflare:</b> augmented scenes with synthesized light flares. We augmented the
+                validation images of Cityscapes and generated 308 images with random light flares. (<a
+                    href="https://drive.google.com/drive/u/4/folders/13EpBXUY8BChoqfMxR5JhiyhqrzqLAO2y">download
+                    link</a>)</p>
+            <p class="image-container">
+                <img src="images/bravobenchmark/synflare/flare1.png" alt="Image 1">
+                <img src="images/bravobenchmark/synflare/flare2.png" alt="Image 2">
+                <img src="images/bravobenchmark/synflare/flare3.png" alt="Image 3">
+                <img src="images/bravobenchmark/synflare/flare4.png" alt="Image 4">
+                <img src="images/bravobenchmark/synflare/flare5.png" alt="Image 5">
+            </p>
+            <p><b>bravo-outofcontext:</b> augmented scenes with random backgrounds. We augmented the
+                validation images of Cityscapes and generated 329 images with random random backgrounds. (<a
+                    href="https://drive.google.com/drive/u/4/folders/1NoXqTQWxrj_yKMNRKLOd1rnn2TjqIaU5">download
+                    link</a>)</p>
+            <p class="image-container">
+                <img src="images/bravobenchmark/synooc/ooc1.png" alt="Image 1">
+                <img src="images/bravobenchmark/synooc/ooc2.png" alt="Image 2">
+                <img src="images/bravobenchmark/synooc/ooc3.png" alt="Image 3">
+                <img src="images/bravobenchmark/synooc/ooc4.png" alt="Image 4">
+                <img src="images/bravobenchmark/synooc/ooc5.png" alt="Image 5">
+            </p>
+            <p><b>bravo-ACDC:</b> real scenes captured in adverse weather conditions, i.e. fog, night, rain
+                and snow. (<a
+                    href="https://drive.google.com/drive/u/4/folders/1IW6-Tdfk2At6CrIIrA-QJF6CEcHgqqha">download
+                    link</a> or directly from <a href="https://acdc.vision.ee.ethz.ch/download">ACDC
+                    website</a>)</p>
+            <p class="image-container">
+                <img src="images/bravobenchmark/acdc/acdc1.png" alt="Image 1">
+                <img src="images/bravobenchmark/acdc/acdc2.png" alt="Image 2">
+                <img src="images/bravobenchmark/acdc/acdc3.png" alt="Image 3">
+                <img src="images/bravobenchmark/acdc/acdc4.png" alt="Image 4">
+                <img src="images/bravobenchmark/acdc/acdc5.png" alt="Image 5">
+            </p>
+            <p><b>bravo-SMIYC:</b> real scenes featuring out-of-distribution (OOD) objects rarely encountered
+                on the road. (<a
+                    href="https://drive.google.com/drive/u/4/folders/1XnC9_7RzwZCWaDpP3iETbGt7Yvmg0MOg">download
+                    link</a> or directly from <a href="https://segmentmeifyoucan.com/">SMIYC
+                    website</a>)</p>
+            <p class="image-container">
+                <img src="images/bravobenchmark/smiyc/smiyc1.jpg" alt="Image 1">
+                <img src="images/bravobenchmark/smiyc/smiyc2.jpg" alt="Image 2">
+                <img src="images/bravobenchmark/smiyc/smiyc3.jpg" alt="Image 3">
+                <img src="images/bravobenchmark/smiyc/smiyc4.jpg" alt="Image 4">
+                <img src="images/bravobenchmark/smiyc/smiyc5.jpg" alt="Image 5">
+            </p>
 
             <h3>Metrics</h3>
-            <p>For a comprehensive assessment of the robustness of various semantic segmentation models, we adopt the following metrics:</p>
+            <p>For a comprehensive assessment of the robustness of various semantic segmentation models, we adopt the
+                following metrics:</p>
             <ul>
-                <li><em>mIoU </em>- mean Intersection Over Union: quantifying the degree of overlap between correct predictions and actual labels against the total number of true positives, false positives and false negatives</li>
-                <li><em>AUROC</em>: a threshold-free metric corresponding to the probability that a certain example has a higher value than an uncertain one</li>
-                <li><em>AUPR-Success</em> - Area Under the Precision-Recall curve&nbsp;</li>
-                <li><em>AUPR-Error</em> - Area Under the Precision-Recall curve Error: computing the area under the Precision-Recall curve using errors as the positive class</li>
-                <li><em>FPR@95TPR</em>: measuring the false positive rate when the true positive rate is set to 95%</li>
-                <li><em>ECE </em>- Expected Calibration Error: measuring the expected difference between accuracy and predicted uncertainty</li>
+                <li><em>mIoU</em>: mean Intersection Over Union, quantifying the degree of overlap between correct
+                    predictions and actual labels against the total number of true positives, false positives and false
+                    negatives.</li>
+                <li><em>AUROC</em>: Area Under the ROC Curve, a threshold-free metric quantifying the probability
+                    that a randomly chosen certain example will be ranked higher than a randomly chosen uncertain one.
+                </li>
+                <li><em>AUPR-Success</em>: Area Under the Precision-Recall curve.</li>
+                <li><em>AUPR-Error</em>: Area Under the Precision-Recall curve Error, computing the area under the
+                    Precision-Recall curve using errors as the positive class.</li>
+                <li><em>FPR@95TPR</em>: measuring the False Positive Rate when the True Positive Rate is set to 95%.
+                </li>
+                <li><em>ECE</em>: Expected Calibration Error, measuring the expected difference between accuracy and
+                    predicted uncertainty.</li>
             </ul>
 
-            <h3>Benchmark server</h3>
-            Being part of the <a href="https://www.elsa-ai.eu/">ELSA european project</a> on secure and safe AI, the BRAVO benchmark is officially featured on the ELSA benchmark <a href="https://benchmarks.elsa-ai.eu/?ch=1&com=introduction">website</a>. Participants can visit this <a href="https://benchmarks.elsa-ai.eu/?ch=1&com=introduction">website</a> for detailed submission information.
+            <h3>Benchmark server, Submission details, Schedule</h3>
+            <p>We are excited to unveil the BRAVO Challenge as an official initiative within
+                <a href="https://www.elsa-ai.eu/">ELSA — European Lighthouse on Secure and Safe AI</a>,
+                a network of excellence funded by the European Union. The BRAVO Challenge is officially featured on the
+                <a href="https://benchmarks.elsa-ai.eu/">ELSA Benchmarks website</a> as
+                the Autonomous Driving/Robust Perception task.
+            </p>
+            <p>Please refer to the <a href="https://benchmarks.elsa-ai.eu/?ch=1&com=introduction">task website</a>
+                for detailed submission information on the submission format and schedule.</p>
 
+            <h3>Acknowledgements</h3>
+            <p>We extend our heartfelt gratitude to the authors of
+                <a href="https://acdc.vision.ee.ethz.ch/contact/">ACDC</a>,
+                <a href="https://segmentmeifyoucan.com/">SegmentMeIfYouCan</a> and
+                <a href="https://arxiv.org/abs/2108.00968">Out-of-context Cityscapes</a> for generously granting us
+                permission to repurpose their benchmarking data. We are also thankful to the authors of
+                <a href="https://github.com/astra-vision/GuidedDisent">GuidedDisent</a> and
+                <a href="https://github.com/google-research/google-research/tree/master/flare_removal">Flare-Removal</a>
+                for providing the amazing toolboxes that helped synthesizing realistic-looking rain drops and light
+                flares. All those people collectively contributed to the creation of BRAVO, a unified benchmark
+                for robustness in autonomous driving.
+            </p>
         </div>
 
         <div id="organizers" class="container-md section-container">
