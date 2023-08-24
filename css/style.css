@@ -29,8 +29,9 @@ a:hover {
     background-image: url('../images/hero/hero-fade.jpg');
     background-size: cover;
     background-position: center;
-
     z-index: -1;
+    /* to prevent margin-collapse with h1: */
+    padding-top: 1px;
 }
 
 .hero img {
@@ -213,4 +214,15 @@ acronym {
 .image-container img {
     max-width: calc(95% / 5);
     height: auto;
+}
+
+ul.accepted-papers {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+ul.accepted-papers li {
+    padding-left: 2em;
+    text-indent: -2em;
+    margin-bottom: 0.5em;
 }
