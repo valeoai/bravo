@@ -387,20 +387,19 @@
             <p>In conjunction with the BRAVO workshop at ICCV'23, we are organizing a challenge on the robustness of
                 autonomous driving in the open world. The 2023 BRAVO Challenge aims at benchmarking segmentation models
                 on urban scenes undergoing diverse forms of natural degradation and realistic-looking synthetic
-                corruptions. We offer two tracks for benchmarking segmentation models trained on a single dataset and
-                on multiple heterogeneous datasets.</p>
+                corruptions. We offer two tracks for benchmarking segmentation models: (1) trained on a single dataset
+                and (2) trained on multiple heterogeneous datasets.</p>
 
             <h3>General rules</h3>
             <ol>
-                <li>Models participating in each track must be trained using the datasets in the corresponding allowed
-                    list.</li>
-                <li>It is strictly forbidden to employ generative model for synthetic data augmentation.</li>
+                <li>Models in each track must be trained using only the datasets allowed for that track.</li>
+                <li>It is strictly forbidden to employ generative models for synthetic data augmentation.</li>
                 <li>All results must be reproducible. Participants must submit a white paper containing comprehensive
                     technical details alongside their results. Participants must make models and inference code
                     accessible.</li>
             </ol>
 
-            <h3>Track 1 — Single-domain training</h3>
+            <h3>Track 1 – Single-domain training</h3>
             <p>In this track, models must be trained exclusively on the published
                 <a href="https://www.cityscapes-dataset.com/">Cityscapes dataset</a>. This track evaluates the
                 robustness of models trained with limited supervision and geographical diversity when facing unexpected
@@ -410,15 +409,14 @@
             <p>The evaluation will be performed on the 19 semantic classes of Cityscapes.
             </p>
 
-            <h3>Track 2 — Multi-domain training</h3>
+            <h3>Track 2 – Multi-domain training</h3>
             <p>In this track, the models may be trained over a mix of multiple datasets, whose choice is strictly
                 limited to the list provided below, comprising both real and synthetic domains. This track aims to
-                assess
-                the extent to which robustness can be enhanced with fewer constraints on the training data.</p>
+                assess how fewer constraints on the training data can enhance robustness.</p>
 
             <p>The evaluation will be performed on the 19 semantic classes of
-                <a href="https://www.cityscapes-dataset.com/">Cityscapes</a>. Participants may choose maintain the label
-                sets of each dataset or remap them to Cityscapes.
+                <a href="https://www.cityscapes-dataset.com/">Cityscapes</a>. Participants may choose to maintain
+                the label sets of each dataset or remap them to Cityscapes.
             </p>
 
             <p>Allowed training datasets for Track 2:</p>
@@ -434,7 +432,7 @@
 
             <h3>BRAVO Dataset</h3>
             <p>We created the benchmark dataset with real captured images and realistic-looking augmented images,
-                repurposing existing datasets and combine them with newly generated data. The benchmark dataset
+                repurposing existing datasets and combining them with newly generated data. The benchmark dataset
                 comprises images from <a href="https://acdc.vision.ee.ethz.ch/">ACDC</a>,
                 <a href="https://segmentmeifyoucan.com/">SegmentMeIfYouCan</a>,
                 <a href="https://arxiv.org/abs/2108.00968">Out-of-context Cityscapes</a>, and new synthetic data.
@@ -519,7 +517,7 @@
                 following metrics:</p>
             <ul>
                 <li><em>mIoU</em>: mean Intersection Over Union, quantifying the degree of overlap between correct
-                    predictions and actual labels against the total number of true positives, false positives and false
+                    predictions and actual labels against the total number of true positives, false positives, and false
                     negatives.</li>
                 <li><em>AUROC</em>: Area Under the ROC Curve, a threshold-free metric quantifying the probability
                     that a randomly chosen certain example will be ranked higher than a randomly chosen uncertain one.
@@ -527,14 +525,14 @@
                 <li><em>AUPR-Success</em>: Area Under the Precision-Recall curve.</li>
                 <li><em>AUPR-Error</em>: Area Under the Precision-Recall curve Error, computing the area under the
                     Precision-Recall curve using errors as the positive class.</li>
-                <li><em>FPR@95TPR</em>: measuring the False Positive Rate when the True Positive Rate is set to 95%.
+                <li><em>FPR@95TPR</em>: measuring the False Positive Rate when setting the True Positive Rate to 95%.
                 </li>
                 <li><em>ECE</em>: Expected Calibration Error, measuring the expected difference between accuracy and
                     predicted uncertainty.</li>
             </ul>
 
             <h3>Benchmark server, Submission details, Schedule</h3>
-            <p>We are excited to unveil the BRAVO Challenge as an official initiative within
+            <p>We are excited to unveil the BRAVO Challenge as an initiative within
                 <a href="https://www.elsa-ai.eu/">ELSA — European Lighthouse on Secure and Safe AI</a>,
                 a network of excellence funded by the European Union. The BRAVO Challenge is officially featured on the
                 <a href="https://benchmarks.elsa-ai.eu/">ELSA Benchmarks website</a> as
@@ -550,9 +548,9 @@
                 <a href="https://arxiv.org/abs/2108.00968">Out-of-context Cityscapes</a> for generously granting us
                 permission to repurpose their benchmarking data. We are also thankful to the authors of
                 <a href="https://github.com/astra-vision/GuidedDisent">GuidedDisent</a> and
-                <a href="https://github.com/google-research/google-research/tree/master/flare_removal">Flare-Removal</a>
-                for providing the amazing toolboxes that helped synthesizing realistic-looking rain drops and light
-                flares. All those people collectively contributed to the creation of BRAVO, a unified benchmark
+                <a href="https://github.com/google-research/google-research/tree/master/flare_removal">Flare Removal</a>
+                for providing the amazing toolboxes that helped synthesize realistic-looking raindrops and light
+                flares. All those people collectively contributed to creating BRAVO, a unified benchmark
                 for robustness in autonomous driving.
             </p>
         </div>
