@@ -172,6 +172,11 @@ acronym {
         margin-right: auto;
     }
 
+    .program-row,
+    .dates-row {
+        margin-bottom: 4px;
+    }
+
 }
 
 .person-card {
