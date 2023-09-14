@@ -636,17 +636,17 @@
                         predicted uncertainty. Evaluated splits: bravo-ACDC, bravo-synrain, bravo-synflare, bravo-outofcontext.</li>
 
                 <li><em>AUPR-Success</em>: Area Under the Precision-Recall curve Error, computing the area under the
-                    Precision-Recall curve using semantic prediction successes as the positive class. Evaluated splits: bravo-ACDC, bravo-synrain, bravo-synflare, bravo-outofcontext.</li>
+                    Precision-Recall curve using semantic prediction successes as the positive class. Evaluated splits: bravo-ACDC, bravo-synrain, bravo-synflare, bravo-outofcontext. The evaluation code should resemble: <code>sklearn.metrics.precision_recall_curve(pred==label, conf)</code>.</li>
 
                 <li><em>AUPR-Error</em>: Area Under the Precision-Recall curve Error, computing the area under the
-                    Precision-Recall curve using semantic prediction failures as the positive class. Evaluated splits: bravo-ACDC, bravo-synrain, bravo-synflare, bravo-outofcontext.</li>
+                    Precision-Recall curve using semantic prediction failures as the positive class. Evaluated splits: bravo-ACDC, bravo-synrain, bravo-synflare, bravo-outofcontext. The evaluation code should resemble: <code>sklearn.metrics.precision_recall_curve(pred!=label, -conf)</code>.</li>
 
                 <li><em>AUROC-ood</em>: Area Under the ROC Curve, a threshold-free metric quantifying the probability
-                    that a randomly chosen certain example will be ranked higher than a randomly chosen uncertain one. Evaluated splits: bravo-ACDC, bravo-synrain, bravo-synflare, bravo-synobjs, bravo-SMIYC.
+                    that a randomly chosen certain example will be ranked higher than a randomly chosen uncertain one. Evaluated splits: bravo-ACDC, bravo-synrain, bravo-synflare, bravo-synobjs, bravo-SMIYC. The evaluation code should resemble: <code>sklearn.metrics.roc_curve(ood_label, -conf)</code>.
                 </li>
 
                 <li><em>AUPR-ood</em>: Area Under the ROC Curve, a threshold-free metric quantifying the probability
-                    that a randomly chosen certain example will be ranked higher than a randomly chosen uncertain one. Evaluated splits: bravo-ACDC, bravo-synrain, bravo-synflare, bravo-synobjs, bravo-SMIYC.
+                    that a randomly chosen certain example will be ranked higher than a randomly chosen uncertain one. Evaluated splits: bravo-ACDC, bravo-synrain, bravo-synflare, bravo-synobjs, bravo-SMIYC. The evaluation code should resemble: <code>sklearn.metrics.precision_recall_curve(ood_label, -conf)</code>.
                 </li>
 
                 <li><em>FPR@95TPR-ood</em>: measuring the False Positive Rate when setting the True Positive Rate to 95%. Evaluated splits: bravo-ACDC, bravo-synrain, bravo-synflare, bravo-synobjs, bravo-SMIYC.
@@ -661,7 +661,7 @@
                 the Autonomous Driving/Robust Perception task.
             </p>
 
-            <p style="color:#FF0000">For the moment, we opt to the manual submission via email. Please directly contact us via bravobenchmark@gmail.com or tuan-hung.vu@valeo.com</p>
+            <p style="color:#FF0000">For the moment, we opt to the manual submission via email. Please directly contact us via bravobenchmark@gmail.com or tuan-hung.vu@valeo.com. To ensure that your results are available by the time of the workshop, please submit your entry no later than September 30th.</p>
             
             <p style="color:#dde5ee">Please refer to the <a href="https://benchmarks.elsa-ai.eu/?ch=1&com=introduction">task website</a>
                 for detailed submission information on the submission format and schedule.</p>
@@ -693,7 +693,7 @@
                 <li>For each input image "ori_name.png", we requires two corresponding files: "ori_name_pred.png" for the semantic prediction and "ori_name_conf.webp" for the confidence level regarding the model's predictions."</li>
                 <li>Semantic predictions <code>pred</code> must be 8-bit grayscale <code>.png</code> images (<code>numpy.uint8</code>). Predictions must be encoded in Cityscapes 19-class format, e.g., road should correspond to ID 0. List of 19 Cityscapes <code>['road', 'sidewalk', 'building', 'wall', 'fence', 'pole', 'traffic light', 'traffic sign', 'vegetation', 'terrain', 'sky', 'person', 'rider', 'car', 'truck', 'bus', 'train', 'motorcycle','bicycle']</code>. Please refer to <a href="./files/cityscapes.json">cityscapes.json</a> for the 19-class mapping.
                 </li>
-                <li>Confidence maps <code>conf</code> must be 8-bit grayscale <code>.webp</code> images (<code>numpy.uint8</code>), where a value of 0 corresponds to confidence 0.0 and a value of 100 corresponds to confidence 1.0. The python code should be <code>cv2.imwrite(conf_file, conf, [cv2.IMWRITE_WEBP_QUALITY, 100])</code>
+                <li>Confidence maps <code>conf</code> must be 8-bit grayscale <code>.webp</code> images (<code>numpy.uint8</code>), where a value of 0 corresponds to confidence 0.0 and a value of 100 corresponds to confidence 1.0. The same confidence map <code>conf</code> is used for all metrics. The python code for saving confidence should resemble <code>cv2.imwrite(conf_webp_file, conf, [cv2.IMWRITE_WEBP_QUALITY, 100])</code>
                 </li>
                 <li>Example <a href="https://drive.google.com/file/d/14knXF7wIE4hTBOBZllX9QxaL610UF_hn/view?usp=drive_link">submission</a>.
                 </li>
