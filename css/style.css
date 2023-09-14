@@ -231,3 +231,42 @@ ul.accepted-papers li {
     text-indent: -2em;
     margin-bottom: 0.5em;
 }
+
+ul.tree {
+    list-style-type: none;
+    padding-left: 20px;
+}
+
+ul.tree li {
+    position: relative;
+}
+
+ul.tree li::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -10px;
+    border-left: 1px solid #000;
+    height: 100%;
+}
+
+/* Add some CSS styles to format the code */
+pre {
+    background-color: #f4f4f4;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    white-space: pre-wrap;
+}
+
+/* Optionally, you can add syntax highlighting using a library like Prism.js or highlight.js */
+pre code {
+    display: block;
+    overflow-x: auto;
+    padding: 0;
+}
+
+/* Define a class for Python code blocks */
+.python-code {
+    color: #333;
+}
