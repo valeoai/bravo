@@ -711,7 +711,7 @@
                     </ul>
                 </li>
                 <li>For each input image "ori_name.png", we requires two corresponding files: "ori_name_pred.png" for
-                    the semantic prediction and "ori_name_conf.webp" for the confidence level regarding the model's
+                    the semantic prediction and "ori_name_conf.png" for the confidence level regarding the model's
                     predictions."</li>
                 <li>Semantic predictions <code>pred</code> must be 8-bit grayscale <code>.png</code> images
                     (<code>numpy.uint8</code>). Predictions must be encoded in Cityscapes 19-class format, e.g., road
@@ -719,18 +719,19 @@
                     <code>['road', 'sidewalk', 'building', 'wall', 'fence', 'pole', 'traffic light', 'traffic sign', 'vegetation', 'terrain', 'sky', 'person', 'rider', 'car', 'truck', 'bus', 'train', 'motorcycle','bicycle']</code>.
                     Please refer to <a href="./files/cityscapes.json">cityscapes.json</a> for the 19-class mapping.
                 </li>
-                <li>Confidence maps <code>conf</code> must be 8-bit grayscale <code>.webp</code> images
-                    (<code>numpy.uint8</code>), where a value of 0 corresponds to confidence 0.0 and a value of 100
-                    corresponds to confidence 1.0. The same confidence map <code>conf</code> is used for all metrics.
+                <li>Confidence maps <code>conf</code> must be 16-bit grayscale <code>.png</code> <s>.webp</s> images
+                    (<code>numpy.uint16</code>), where a value of <code>0.0</code> corresponds to confidence <code>0</code> and a value of <code>65535</code> <s>100</s>
+                    corresponds to confidence <code>1.0</code>. The same confidence map <code>conf</code> is used for all metrics.
                     The python code for saving confidence should resemble
-                    <code>cv2.imwrite(conf_webp_file, conf, [cv2.IMWRITE_WEBP_QUALITY, 100])</code>
+                    <code>cv2.imwrite(conf_webp_file, conf)</code> <s>[cv2.IMWRITE_WEBP_QUALITY, 100]</s>
                 </li>
                 <li>Example <a
                         href="https://drive.google.com/file/d/14knXF7wIE4hTBOBZllX9QxaL610UF_hn/view?usp=drive_link">submission</a>.
                 </li>
-
             </ul>
 
+            <h3>Leaderboard</h3>
+            <p style="color:#FF0000">Coming soon!</p>
 
             <h3>Acknowledgements</h3>
             <p>We extend our heartfelt gratitude to the authors of
