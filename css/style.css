@@ -114,7 +114,8 @@ h3 {
 
 .nav-item {
     text-align: center;
-    text-shadow: 1px 1px 1px #DDDDDD;
+    font-weight: 700;
+    text-shadow: 1px 1px 5px #DDDDDD;
 }
 
 .navbar {
